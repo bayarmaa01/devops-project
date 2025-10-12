@@ -65,7 +65,7 @@ jobs:
     needs: build-and-push
     environment:
       name: staging
-      url: http://localhost:3000
+      url: https://devops-project-pahk.onrender.com
     
     steps:
       - run: |
@@ -79,7 +79,7 @@ jobs:
     needs: [build-and-push, deploy-staging]
     environment:
       name: production
-      url: http://localhost:3000
+      url: https://devops-project-pahk.onrender.com
     
     steps:
       - run: |
