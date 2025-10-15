@@ -1,8 +1,8 @@
 # SaaS Application with CI/CD Pipeline
 
-[![CI](https://github.com/YOUR_USERNAME/saas-cicd-project/workflows/Continuous%20Integration/badge.svg)](https://github.com/YOUR_USERNAME/saas-cicd-project/actions)
-[![CD](https://github.com/YOUR_USERNAME/saas-cicd-project/workflows/Continuous%20Deployment/badge.svg)](https://github.com/YOUR_USERNAME/saas-cicd-project/actions)
-[![Security](https://github.com/YOUR_USERNAME/saas-cicd-project/workflows/Security%20Scanning/badge.svg)](https://github.com/YOUR_USERNAME/saas-cicd-project/actions)
+[![CI](https://github.com/YOUR_USERNAME/devops-project/workflows/Continuous%20Integration/badge.svg)](https://github.com/bayarmaa01/devops-project/actions)
+[![CD](https://github.com/bayarmaa01/devops-project/workflows/Continuous%20Deployment/badge.svg)](https://github.com/bayarmaa01/devops-project/actions)
+[![Security](https://github.com/bayarmaa01/devops-project/workflows/Security%20Scanning/badge.svg)](https://github.com/bayarmaa01/devops-project/actions)
 
 Production-grade CI/CD pipeline implementation using GitHub Actions, Docker, and modern DevOps practices.
 
@@ -28,7 +28,7 @@ Production-grade CI/CD pipeline implementation using GitHub Actions, Docker, and
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/saas-cicd-project.git
+git clone https://github.com/bayarmaa01/devops-project-project.git
 cd saas-cicd-project
 ```
 
@@ -287,7 +287,7 @@ This project is licensed under the MIT License.
 
 ## 👤 Author
 
-Your Name - [@yourhandle](https://github.com/YOUR_USERNAME)
+Your Name - [@yourhandle](https://github.com/bayarmaa01)
 
 ## ⭐ Show Your Support
 
