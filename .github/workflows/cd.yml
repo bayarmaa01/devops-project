@@ -65,7 +65,7 @@ jobs:
     needs: build-and-push
     environment:
       name: staging
-      url: https://saas-frontend-0vfa.onrender.com
+      url: https://devops-project-2-85kl.onrender.com
     
     steps:
       - run: |
@@ -79,7 +79,7 @@ jobs:
     needs: [build-and-push, deploy-staging]
     environment:
       name: production
-      url: https://saas-frontend-0vfa.onrender.com
+      url: https://devops-project-2-85kl.onrender.com
     
     steps:
       - run: |
