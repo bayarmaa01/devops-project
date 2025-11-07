@@ -1,7 +1,6 @@
 {
   "name": "saas-cicd-project",
   "version": "1.0.0",
-  "type": "module",
   "description": "Production-grade CI/CD pipeline with GitHub Actions",
   "main": "src/app.js",
   "scripts": {
