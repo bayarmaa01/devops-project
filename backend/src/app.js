@@ -1,22 +1,30 @@
-// Import dependencies
-const express = require('express');
-const cors = require('cors');
+import express from "express";
+import cors from "cors";
 
-// Initialize app
 const app = express();
 
-// Middleware setup
+// ✅ Allow frontend hosted on Render + localhost to access
 app.use(cors({
   origin: [
-    'http://localhost:5173',
-    'http://localhost:3000',
-    'https://devops-project-2-85kl.onrender.com' // Your frontend URL
+    "https://saas-frontend-0vfa.onrender.com", // frontend Render URL
+    "http://localhost:5173" // local dev
   ],
   credentials: true
 }));
 
-// Add your routes here (optional)
-// app.use('/api', require('./routes/yourRoute'));
+// ✅ Health route for frontend to check API status
+app.get("/health", (req, res) => {
+  res.json({
+    status: "ok",
+    environment: process.env.NODE_ENV || "production",
+    uptime: process.uptime(),
+    version: "1.0.0"
+  });
+});
 
-// Export app if used in another file
-module.exports = app;
+// ✅ Root route
+app.get("/", (req, res) => {
+  res.send("Backend API is running successfully 🚀");
+});
+
+export default app;
