@@ -8,6 +8,7 @@ function App() {
   const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
   useEffect(() => {
+    console.log("API URL:", API_URL);
     fetch(`${API_URL}/health`)
       .then(res => res.json())
       .then(data => setApiHealth(data))
@@ -222,7 +223,7 @@ function App() {
       <footer className="border-t border-purple-500/30 bg-slate-900/50 py-8">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <p className="text-gray-400 text-sm">
-            © 2024 AI-Enhanced CI/CD Pipeline | Full-Stack Application
+            © 2025 AI-Enhanced CI/CD Pipeline | Full-Stack Application
           </p>
         </div>
       </footer>
