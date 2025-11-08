@@ -9,10 +9,19 @@ function App() {
 
   useEffect(() => {
     console.log("API URL:", API_URL);
+
     fetch(`${API_URL}/health`)
-      .then(res => res.json())
-      .then(data => setApiHealth(data))
-      .catch(err => console.error('API not reachable:', err));
+      .then(res => {
+        console.log('Response status:', res.status);  // Debug
+        return res.json();
+      })
+      .then(data => {
+        console.log('Health data:', data);  // Debug
+        setApiHealth(data);
+      })
+      .catch(err => {
+        console.error('API not reachable:', err);  // Should see this if offline
+      });
   }, []);
 
   return (
