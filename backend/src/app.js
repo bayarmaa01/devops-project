@@ -12,7 +12,7 @@ app.use(cors({
     'http://localhost:5173',
     'http://localhost:3000',
     'https://devops-project-2-85kl.onrender.com',     // Your frontend
-    'https://frontend-frontend.onrender.com'          // If you have this too
+             // If you have this too
   ],
   credentials: true
 }));
