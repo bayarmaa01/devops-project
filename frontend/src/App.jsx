@@ -62,7 +62,7 @@ function App() {
 
       <section className="max-w-6xl mx-auto px-4 py-16 text-center">
         <div className="inline-block px-4 py-2 bg-purple-500/20 rounded-full text-purple-300 text-sm mb-6">
-          Welcome Production-Grade Full-Stack Application
+          Production-Grade Full-Stack Application
         </div>
         <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
           Deploy in 3 Minutes<br />Instead of 60
