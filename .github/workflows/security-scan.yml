@@ -1,0 +1,37 @@
+name: Security Scanning
+
+on:
+  push:
+    branches: [ main, develop ]
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  dependency-scan:
+    name: Dependency Scan
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      - run: npm ci
+      - run: npm audit --audit-level=moderate
+        continue-on-error: true
+
+  container-scan:
+    name: Container Scan
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t saas-app:scan .
+      - uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: 'saas-app:scan'
+          format: 'table'
+          severity: 'CRITICAL,HIGH'
+        continue-on-error: true
